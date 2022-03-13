@@ -72,11 +72,10 @@ int main () {
 
     num = a>b?printf("Max of two numbers is %d", a):printf("Max of two numbers is %d", b);*/
 
-    /*Max of three numbers using conditional operators*/
-    printf("Enter three numbers: ");
-    scanf("%d %d %d", &a , &b, &x);
+    x = 10;
+    y = ~ x;
 
-    a>b?(a>x?printf("\t%d", a):printf("\t%d", x)):(b>x?printf("\t%d", b):printf("\t%d", x));
+    printf("%d", y);
 
 
 
