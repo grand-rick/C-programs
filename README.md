@@ -1,2 +1,2 @@
 # C-programs
-This is a repo to store most of my school program assignments in C.
+This is a repository to store most of my program assignments in C.
