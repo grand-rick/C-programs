@@ -38,7 +38,8 @@ int main() {
 
 int main () {
     //char gender;
-    int num, a, b, x, y;
+    int a, b, x, y;
+    float avg;
 
     /*printf("Enter gender (b or g): ");
     scanf("%c", &gender);
@@ -72,11 +73,17 @@ int main () {
 
     num = a>b?printf("Max of two numbers is %d", a):printf("Max of two numbers is %d", b);*/
 
-    x = 10;
+    /*x = 10;
     y = ~ x;
 
     printf("%d", y);
+    */
 
+    a = 10, b = 10, x = 10, y = 10;
+
+    avg = (float) (a+b+x+y)/4;
+
+    printf("%f", avg);
 
 
     return 0;
