@@ -11,8 +11,8 @@
 
          printf("Minutes ? ");
          scanf("%d", &minutes);
-         min = minutes;
-         hours = min / 60;
+         min = minutes; //promoting the integer value to a float without casting
+         hours = min / 60; //Otherwise, hours = (float) minutes / 60;
          printf("= %.2lf hours\n", hours);
 
          return 0;
