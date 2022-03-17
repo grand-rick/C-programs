@@ -1,20 +1,20 @@
  #include <stdio.h>
  #include <stdlib.h>
 
-// Relational Expressions
-// relational.c
+ // Rows and Columns
+ // row_columns.c
+
+ #include <stdio.h>
 
  int main(void)
  {
-  int minutes;
-  float hours;
-
-  printf("Minutes ?");
-  scanf("%d", &minutes);
-
-  hours = (float) minutes/60;
-
-  printf("%.2f", hours);
+         int i, j;
+         for (i = 0; i < 5; i++) {
+                 for (j = 0; j < 5; j++) {
+                         printf("%d,%d  ", i, j);
+                 }
+                 printf("\n");
+         }
 
          return 0;
  }
