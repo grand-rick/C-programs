@@ -13,11 +13,17 @@ int main(void)
      printf("Enter the terminal integer : ");
      scanf("%d", &terminal);
 
-    while (i<=terminal) {
+    /*while (i<=terminal) {
         printf("%d, ", i);
         sum += i;
         i++;
+    }*/
+
+    for (;i<=terminal;i++) {
+        printf("%d, ", i);
+        sum += i;
     }
+
 
      printf("\nThe sum of the series is %d\n", sum);
 
