@@ -12,12 +12,12 @@ int main () {
     long long int encrypt, decrypt;
     char ans;
 
-    printf("Would you like to encrypt data? ");
+    printf("How would you like to proceed? \n1-Encrypt 0-Decrypt: \n");
     scanf("%c", &ans);
 
     switch (ans) {
     case '1':
-        printf("Let's encrypt\n");
+        printf("Awesome! Let's encrypt\n");
         printf("Enter the number you want to encrypt: ");
         scanf("%d", &encrypt);
         encryption(encrypt);
@@ -35,16 +35,17 @@ int main () {
     return 0;
 }
 
+//Function to encrypt data
 int encryption (int x) {
     long long int num1, num2, rev1, rev2;
     rev1 = 0;
     rev2 = 0;
-    printf("Your number to encrypt is %d", x);
+    printf("Before encryption: %d", x);
 
+    num1 = x;
     while (x>0) {
-        num1 = x;
         digit = x % 10;
-        convert(digit);
+        encr(digit);
         rev1 = (rev1 * 10) + digit;
         x /= 10;
     }
@@ -56,21 +57,41 @@ int encryption (int x) {
         num2/=10;
     }
 
-    printf("\nYour encrypted data is %d", rev2);
+    printf("\nAfter encryption: %d", rev2);
     return  0;
 }
 
+//Function to decrypt data
 int decryption (int y) {
-    printf("Your number to decrypt is %d", y);
+    printf("Before decryption: %d", y);
+    long long int num1, num2, rev1, rev2;
+    rev1 = 0;
+    rev2 = 0;
 
+    num1 = y;
+    while (num1>0) {
+        digit = num1 % 10;
+        decr(digit);
+        rev1 = (rev1*10) + digit;
+        num1 /= 10;
+    }
+
+    //Second reversal
+    num2 = rev1;
+    while (num2>0) {
+        digit = num2 % 10;
+        rev2 = (rev2*10) + digit;
+        num2 /= 10;
+    }
+    printf("\nAfter decryption: %d", rev2);
     return 0;
 }
 
-
-int convert (int z) {
+//Function that matches original numbers to encrypted numbers
+int encr (int z) {
     int conv;
-
     conv = z;
+
     switch (conv) {
     case 0:
         conv = 3;
@@ -107,7 +128,46 @@ int convert (int z) {
     return digit;
 }
 
+//Function that matches encrypted numbers to original numbers
+int decr (int z) {
+    int conv;
+    conv = z;
 
+    switch (conv) {
+    case 0:
+        conv = 7;
+        break;
+    case 1:
+        conv = 8;
+        break;
+    case 2:
+        conv = 9;
+        break;
+    case 3:
+        conv = 0;
+        break;
+    case 4:
+        conv = 1;
+        break;
+    case 5:
+        conv = 2;
+        break;
+    case 6:
+        conv = 3;
+        break;
+    case 7:
+        conv = 4;
+        break;
+    case 8:
+        conv = 5;
+        break;
+    case 9:
+        conv = 6;
+        break;
+    }
+    digit = conv;
+    return digit;
+}
 
 
 
