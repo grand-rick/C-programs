@@ -8,7 +8,7 @@ int convert (int z);
 int digit;
 
 int main () {
-    //Limit is 9 numbers
+    //Limit of input is 9 numbers
     long long int encrypt, decrypt;
     char ans;
 
@@ -19,13 +19,13 @@ int main () {
     case '1':
         printf("Awesome! Let's encrypt\n");
         printf("Enter the number you want to encrypt: ");
-        scanf("%d", &encrypt);
+        scanf("%9d", &encrypt);
         encryption(encrypt);
         break;
     case '0':
         printf("Great! so you want to decrypt!!\n");
         printf("Enter the number you want to decrypt: ");
-        scanf("%d", &decrypt);
+        scanf("%9d", &decrypt);
         decryption(decrypt);
         break;
     default:
