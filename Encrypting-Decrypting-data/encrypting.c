@@ -1,5 +1,6 @@
 //Program to encrypt and decode data
 //encrypting.c
+//Additional comment
 
 int encryption (int x);
 int decryption (int y);
