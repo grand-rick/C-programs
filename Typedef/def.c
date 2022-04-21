@@ -1,5 +1,8 @@
 /*Showing the function of typedef*/
-
+/*C supports a feature known as “type definition” that allows users to define an identifier
+that would represent an existing data type. The user-defined data type identifier can later be
+used to declare variables. It takes the general form:
+typedef type identifier ;*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
