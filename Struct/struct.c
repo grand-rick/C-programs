@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <string.h>
+#include <conio.h>
+/*
     struct student{
     char name[30];
     char country[20+1];
@@ -24,7 +26,28 @@ int main() {
     printf("\nSize=%d", sizeof(struct student));
     return 0;
 }
+*/
 
+int main () {
+    struct Book {
+    char title[10];
+    char author[20];
+    int pages;
+    };
+
+    struct Book book1;
+    printf("Enter title: ");
+    gets(book1.title);
+    printf("Enter author: ");
+    gets(book1.author);
+    printf("Pages: ");
+    gets(book1.pages);
+
+    printf("Title=%s", book1.title);
+    printf("\nAuthor=%s", book1.author);
+    printf("\nPages=%d", book1.pages);
+    return 0;
+}
 
 
 

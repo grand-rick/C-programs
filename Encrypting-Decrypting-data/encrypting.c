@@ -38,7 +38,7 @@ int main () {
 
 //Function to encrypt data
 int encryption (int x) {
-    long long int num1, num2, rev1, rev2;
+    long int num1, num2, rev1, rev2;
     rev1 = 0;
     rev2 = 0;
     printf("Before encryption: %d", x);
