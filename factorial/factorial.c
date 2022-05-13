@@ -5,13 +5,13 @@
 
 int main () {
     int I, FACT, N;
-    I = 1;
+
     FACT = 1;
 
     printf("Enter a number: ");
     scanf("%d", &N);
 
-    for(;I<=N;I++) {
+    for(I = 1;I<=N;I++) {
         FACT = FACT * I;
     }
     printf("%d\t", FACT);
